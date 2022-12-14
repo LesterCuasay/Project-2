@@ -15,9 +15,10 @@ body {
 }
 
 p {
-    font-family: 'Neuton';
+    font-family: 'Neuton', sans-serif;
 }
 
+/* Styling for the landing page */
 .start-container {
     height: 300px;
     width: 600px;
@@ -72,3 +73,5 @@ p {
     color: #fff;
     transform: scale(0.98);
 }
+
+/* Styling for the Quiz Section */
