@@ -12,5 +12,63 @@ body {
     font-size: 18px;
     color: #131515;
     background-color: #886f68;
-    
+}
+
+p {
+    font-family: 'Neuton';
+}
+
+.start-container {
+    height: 300px;
+    width: 600px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -300px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px #131515;
+}
+
+.start-container .start-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 1px solid #886f68;
+    padding: 10px 0;
+}
+
+.start-container .intro {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    border-bottom: 1px solid #886f68;
+    padding: 30px 0;
+}
+
+.start-container .start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+ 
+.start-container .start-button button {
+    font-size: 25px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: #886f68;
+    color: #fff;
+    transition: 500ms ease all;
+}
+
+.start-container .start-button button:hover {
+    background: #131515;
+    color: #fff;
+    transform: scale(0.98);
 }
