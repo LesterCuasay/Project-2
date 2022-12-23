@@ -65,7 +65,7 @@ const quizData = [
     },
     {
         question: "How many large islands make up Hawaii?",
-        answers: {
+        answer: {
             a: "2",
             b: "4",
             c: "8",
@@ -75,7 +75,7 @@ const quizData = [
     },
     {
         question: "Which river flows through Glasgow?",
-        answers: {
+        answer: {
             a: "River Clyde",
             b: "River Thames",
             c: "River Severn",
@@ -97,10 +97,13 @@ const submitBtn = document.getElementById('submit')
 let currentQuiz = 0
 let score = 0 
 
-
+loadQuiz()
 // Loads Quiz
 
 function loadQuiz() {
+
+    deselectAnswers()
+
     const currentQuizData = quizData[currentQuiz]
 
     questionElement.innerText = currentQuizData.question
@@ -110,15 +113,46 @@ function loadQuiz() {
     d_answer.innerText = currentQuizData.answer.d
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-loadQuiz();
+function deselectAnswers() {
+    answerElements.forEach(answerElements => answerElements.checked = false)
+}
 
+function selectedAnswer() {
+    let answerElements
+    answerElements.forEach(answerElements => {
+        if(answerElements.checked) {
+            correctAnswer = answerElements.id
+        }
+    })
+    return correctAnswer
+}
+
+submitBtn.addEventListener('click', () => {
+    const correctAnswer = selectedAnswer()
+    if(correctAnswer) {
+        if (correctAnswer === quizData[currentQuiz].correct) {
+            score++
+        }
+
+        currentQuiz++
+
+        if(currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+            <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+
+            <button onlclick="location.reload()"></button>
+            `
+        }
+    }
 })
-
 // Sets quiz to random
 
 function shuffleQuiz() {
-const randomNumber = Math.floor(Math.random() * quizObjs.length)
+
+    let quizObjs = quizData.length
+    const randomNumber = Math.floor(Math.random() * quizObjs.length)
 }
 
 shuffleQuiz()
