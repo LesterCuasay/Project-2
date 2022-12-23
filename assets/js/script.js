@@ -86,8 +86,8 @@ const quizData = [
 ];
 
 const quiz = document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('question')
+const answerElements = document.querySelectorAll('.answer')
+const questionElement = document.getElementById('question')
 const a_answer = document.getElementById('a_answer')
 const b_answer = document.getElementById('b_answer')
 const c_answer = document.getElementById('c_answer')
@@ -103,7 +103,7 @@ let score = 0
 function loadQuiz() {
     const currentQuizData = quizData[currentQuiz]
 
-    questionEl.innerText = currentQuizData.question
+    questionElement.innerText = currentQuizData.question
     a_answer.innerText = currentQuizData.answer.a
     b_answer.innerText = currentQuizData.answer.b
     c_answer.innerText = currentQuizData.answer.c
