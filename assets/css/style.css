@@ -74,7 +74,6 @@ li {
     background: #54648c;
 }
 
-
 /* Styling for the Quiz Section */
 
 
@@ -101,5 +100,9 @@ li {
 .container ul li label {
     cursor: pointer;
     padding: 0 1rem;
+}
+
+.container .submit button:hover {
+    background: #54648c;
 }
 
