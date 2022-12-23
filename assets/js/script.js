@@ -1,6 +1,4 @@
-/**
- * Array of questions and answers
- */
+// Array of questions
 
 const quizData = [
     {
@@ -99,16 +97,28 @@ const submitBtn = document.getElementById('submit')
 let currentQuiz = 0
 let score = 0 
 
+
+// Loads Quiz
+
 function loadQuiz() {
-
-    deselectAnswers()
-
     const currentQuizData = quizData[currentQuiz]
 
     questionEl.innerText = currentQuizData.question
-    a_answer.innerText = currentQuizData.a
-    b_answer.innerText = currentQuizData.b
-    c_answer.innerText = currentQuizData.c
-    d_answer.innerText = currentQuizData.d
-
+    a_answer.innerText = currentQuizData.answer.a
+    b_answer.innerText = currentQuizData.answer.b
+    c_answer.innerText = currentQuizData.answer.c
+    d_answer.innerText = currentQuizData.answer.d
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+loadQuiz();
+
+})
+
+// Sets quiz to random
+
+function shuffleQuiz() {
+const randomNumber = Math.floor(Math.random() * quizObjs.length)
+}
+
+shuffleQuiz()
