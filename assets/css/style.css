@@ -31,8 +31,8 @@ li {
 }
 
 /* Styling for the landing page */
-.start-container {
-    height: 400px;
+.container {
+    height: auto;
     width: 600px;
     background-color: #fff;
     display: flex;
@@ -42,7 +42,7 @@ li {
     box-shadow: 5px 10px 8px #131515;
 }
 
-.start-container .start-heading {
+.container .heading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,13 +52,13 @@ li {
     padding: 0.8rem 0;
 }
 
-.start-container .intro {
+.container .intro {
     text-align: center;
-
+    padding: 3rem;
 
 }
 
-.start-container .start-button button {
+.container .button button, .submit button {
     font-size: 1.5rem;
     width:100%;
     border-radius: 5px;
@@ -70,27 +70,15 @@ li {
     border-radius: 0 0 10px 10px;
 }
 
-.start-container .start-button button:hover {
+.container .button button:hover {
     background: #54648c;
 }
 
 
 /* Styling for the Quiz Section */
 
-.quiz-container {
-    height: 400px;
-    width: 600px;
-    background-color: #fff;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -200px;
-    margin-left: -300px;
-    border-radius: 10px;
-    box-shadow: 5px 10px 8px #131515;
-}
 
-.quiz-container .quiz-header h2 {
+.container .quiz-header h2 {
     font-size: 1.5rem;
     font-weight: 500;
     border-bottom: 1px solid #5c6d99;
@@ -98,39 +86,20 @@ li {
     text-align: center;
 }
 
-.quiz-container ul {
+.container ul {
     list-style-type: none;
     padding: 3rem 0.5rem;
     border-bottom: 1px solid #5c6d99;
 }
 
-.quiz-container ul li {
+.container ul li {
     margin: 0.5rem 0;
     font-size: 1.4rem;
     padding: 0 0.5rem;
 }
 
-.quiz-container ul li label {
+.container ul li label {
     cursor: pointer;
     padding: 0 1rem;
 }
 
-.quiz-container .submit button {
-    font-size: 1.5rem;
-    padding: 1.61rem;
-    width: 100%;
-    cursor: pointer;
-    border: none;
-    background: #5c6d99;
-    color: #fff;
-    border-radius: 0 0 10px 10px;
-}
-
-.quiz-container .submit button:hover {
-    background: #54648c;
-}
-
-.quiz-container .submit button:focus {
-    outline: none;
-    background-color: #44b927;
-}
