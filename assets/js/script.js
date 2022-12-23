@@ -42,7 +42,7 @@ const quizData = [
         correctAnswer: "a",
     },
     {
-        question: "Which London Underground is reporesented as green on the tube map?",
+        question: "Which London Underground is represented as green on the tube map?",
         answer: {
             a: "Jubilee Line",
             b: "Central Line",
@@ -85,26 +85,46 @@ const quizData = [
     },
 ];
 
+let quizDataCopy = quizData
+let currentQuiz = 0
+let score = 0 
+let currentQuizData
+
+
 const quiz = document.getElementById('quiz')
 const answerElements = document.querySelectorAll('.answer')
-const questionElement = document.getElementById('question')
+const questionElement = document?.getElementById('question')
 const a_answer = document.getElementById('a_answer')
 const b_answer = document.getElementById('b_answer')
 const c_answer = document.getElementById('c_answer')
 const d_answer = document.getElementById('d_answer')
 const submitBtn = document.getElementById('submit')
 
-let currentQuiz = 0
-let score = 0 
+const deselectAnswers = () => {
+    answerElements.forEach(answerElements => answerElements.checked = false)
+}
 
-loadQuiz()
+// Sets quiz to random
+
+const randomizer = (num) => {
+    return Math.floor(Math.random() * num)
+}
+
+
+if (window.location.pathname === "/quiz.html") {
+    loadQuiz()
+}
+
 // Loads Quiz
 
 function loadQuiz() {
 
+    currentQuiz = randomizer(quizDataCopy.length)
+    currentQuizData = quizDataCopy[currentQuiz]
+    const questionElement = document.getElementById('question')
+
     deselectAnswers()
 
-    const currentQuizData = quizData[currentQuiz]
 
     questionElement.innerText = currentQuizData.question
     a_answer.innerText = currentQuizData.answer.a
@@ -113,46 +133,27 @@ function loadQuiz() {
     d_answer.innerText = currentQuizData.answer.d
 }
 
-function deselectAnswers() {
-    answerElements.forEach(answerElements => answerElements.checked = false)
-}
 
-function selectedAnswer() {
-    let answerElements
-    answerElements.forEach(answerElements => {
-        if(answerElements.checked) {
-            correctAnswer = answerElements.id
+
+// Check if answer is correct
+function submitAnswer() {
+    answerElements.forEach(el => {
+        if(el.checked) {
+            if(el.id === currentQuizData.correctAnswer) {
+                score ++
+            } else {
+
+            }
         }
     })
-    return correctAnswer
-}
+    
+    // Move to the next question
 
-submitBtn.addEventListener('click', () => {
-    const correctAnswer = selectedAnswer()
-    if(correctAnswer) {
-        if (correctAnswer === quizData[currentQuiz].correct) {
-            score++
-        }
-
-        currentQuiz++
-
-        if(currentQuiz < quizData.length) {
-            loadQuiz()
-        } else {
-            quiz.innerHTML = `
-            <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
-            <button onlclick="location.reload()"></button>
-            `
-        }
+    quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
+    
+    if(currentQuiz < quizData.length) {
+        loadQuiz()
     }
-})
-// Sets quiz to random
 
-function shuffleQuiz() {
-
-    let quizObjs = quizData.length
-    const randomNumber = Math.floor(Math.random() * quizObjs.length)
+    console.log(score)
 }
-
-shuffleQuiz()
