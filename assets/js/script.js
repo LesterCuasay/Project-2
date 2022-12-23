@@ -142,7 +142,7 @@ function submitAnswer() {
             if(el.id === currentQuizData.correctAnswer) {
                 score ++
             } else {
-
+ 
             }
         }
     })
