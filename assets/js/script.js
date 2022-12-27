@@ -105,9 +105,6 @@ const startBtn = document.getElementById('start-btn')
 const resultContainer = document.getElementById('results-container')
 const result = document.getElementById('result')
 
-const deselectAnswers = () => {
-    answerElements.forEach(answerElements => answerElements.checked = false)
-}
 
 startBtn.addEventListener('click', loadQuiz)
 
@@ -140,7 +137,9 @@ function loadQuiz() {
     d_answer.innerText = currentQuizData.answer.d
 }
 
-
+const deselectAnswers = () => {
+    answerElements.forEach(answerElements => answerElements.checked = false)
+}
 
 // Check if answer is correct
 function submitAnswer() {
