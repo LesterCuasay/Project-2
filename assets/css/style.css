@@ -42,7 +42,7 @@ li {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
-    box-shadow: 5px 10px 8px #131515;
+    box-shadow: 0px 10px 20px #131515;
     position: fixed;
 }
 
@@ -62,7 +62,9 @@ li {
 
 }
 
-.container .start-btn button, .quiz-container .next-btn button{
+.container .start-btn button, 
+.quiz-container .next-btn button,
+.results-container button {
     font-size: 1.5rem;
     width:100%;
     border-radius: 5px;
@@ -113,3 +115,20 @@ li {
     background: #54648c;
 }
 
+/* Styling for Result Page */
+
+.results-container span {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.results-container p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.results-container button:hover {
+    background: #54648c;
+}

@@ -87,14 +87,14 @@ const quizData = [
 
 // Global let
 let quizDataCopy = quizData
-let currentQuiz = 0
 let score = 0 
+let currentQuiz
 let currentQuizData
 
 // Global const
 const quizContainer = document.getElementById('quiz-container')
 const answerElements = document.querySelectorAll('.answer')
-const questionElement = document?.getElementById('question')
+const questionElement = document.getElementById('question')
 const a_answer = document.getElementById('a_answer')
 const b_answer = document.getElementById('b_answer')
 const c_answer = document.getElementById('c_answer')
@@ -105,8 +105,16 @@ const startBtn = document.getElementById('start-btn')
 const resultContainer = document.getElementById('results-container')
 const result = document.getElementById('result')
 
+const deselectAnswers = () => {
+    answerElements.forEach(answerElements => answerElements.checked = false)
+}
 
-startBtn.addEventListener('click', loadQuiz)
+// Start the quiz
+startBtn.addEventListener('click', () => {
+    startContainer.classList.add('hide')
+
+    loadQuiz()
+})
 
 // Sets quiz to random
 
@@ -117,18 +125,16 @@ const randomizer = (num) => {
 // Loads Quiz
 
 function loadQuiz() {
-
-    // Hides start container and shows quiz container
-    startContainer.classList.add('hide')
-    quizContainer.classList.remove('hide')
-
-
-    currentQuiz = randomizer(quizDataCopy.length)
-    currentQuizData = quizDataCopy[currentQuiz]
     const questionElement = document.getElementById('question')
 
-    deselectAnswers()
+    // Hides start container and shows quiz container
+    quizContainer.classList.remove('hide')
+    
+    currentQuiz = randomizer(quizDataCopy.length)
+    currentQuizData = quizDataCopy[currentQuiz]
+    
 
+    deselectAnswers()
 
     questionElement.innerText = currentQuizData.question
     a_answer.innerText = currentQuizData.answer.a
@@ -137,17 +143,13 @@ function loadQuiz() {
     d_answer.innerText = currentQuizData.answer.d
 }
 
-const deselectAnswers = () => {
-    answerElements.forEach(answerElements => answerElements.checked = false)
-}
-
 // Check if answer is correct
 function submitAnswer() {
-   
+    
     answerElements.forEach(el => {
         if(el.checked) {
             if(el.id === currentQuizData.correctAnswer) {
-                score ++
+                score++
             } 
         }
     })
@@ -161,19 +163,35 @@ function nextQuestion() {
   
     quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
     
-    if(currentQuiz < quizData.length) {
+    if(quizDataCopy.length > 0) {
         loadQuiz()
-        currentQuiz ++
     } else {
-        displayResults(correctTotal)
+        displayResults(score)
     }
 
 }
 
-function displayResults(correctTotal) {
-   quizContainer.style.display = 'none'
-   resultContainer.style.display = ''
-   result.innerText = `${correctTotal} out of ${quizData.length}`
+function displayResults(score) {
+   quizContainer.classList.add("hide")
+   resultContainer.classList.remove("hide")
+   result.innerText = `${score} out of ${quizData.length}`
+
+   if (score === quizData.length) {
+    comment.innerText = `
+    Awesome, You got every question right! 
+    You scored
+    `
+   } else if (score < (quizData.length) && score > (quizData.length /2)){
+   comment.innerText =`
+   You nearly got all of them right! 
+   You scored
+    `
+   } else {
+    comment.innerText = `
+    Well... That was disappointing
+    You scored
+    `
+   }
 }
 
 
