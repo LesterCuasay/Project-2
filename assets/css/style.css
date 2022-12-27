@@ -56,12 +56,6 @@ li {
     padding: 0.8rem 0;
 }
 
-/* .container .intro {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .container .intro h2 {
     text-align: center;
     font-size: 1.8rem;
@@ -161,4 +155,75 @@ li {
 
 .results-container button:hover {
     background: #54648c;
+}
+
+ /* Media Queries */
+
+ @media screen and (max-width: 375px) {
+
+.container, 
+.quiz-container,
+.results-container {
+    width: 320px;
+    text-align: center;
+}
+
+.container .heading {
+    font-size: 0.7rem;
+}
+
+.container .intro h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.container .intro ul li {
+    font-size: 0.8rem;
+}
+
+.container .start-btn button, 
+.quiz-container .next-btn button,
+.results-container button {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+.quiz-container ul {
+    text-align: left;
+    padding: 5%;
+}
+
+.quiz-container ul li {
+    font-size: 1rem;
+}
+
+.quiz-container .quiz-header h2 {
+    font-size: 1rem;
+}
+
+}
+
+@media screen and (max-width: 725px) {
+
+.container, 
+.quiz-container,
+.results-container {
+    width: 450px;
+}
+
+.container .heading {
+    font-size: 1.2rem;
+}
+}
+
+@media screen and (max-width: 525px) {
+
+.container .heading {
+    font-size: 0.9rem;
+}
+
+.container .intro ul li {
+    font-size: 1rem;
+}
 }
