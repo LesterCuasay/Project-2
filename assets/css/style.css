@@ -58,7 +58,7 @@ li {
 
 }
 
-.container .button button, .submit button {
+.container .start-btn button, .next-btn {
     font-size: 1.5rem;
     width:100%;
     border-radius: 5px;
@@ -70,12 +70,15 @@ li {
     border-radius: 0 0 10px 10px;
 }
 
-.container .button button:hover {
+.container .start-btn button:hover {
     background: #54648c;
 }
 
 /* Styling for the Quiz Section */
 
+.hide {
+    display: none;
+}
 
 .container .quiz-header h2 {
     font-size: 1.5rem;
@@ -102,7 +105,7 @@ li {
     padding: 0 1rem;
 }
 
-.container .submit button:hover {
+.container .next-btn button:hover {
     background: #54648c;
 }
 

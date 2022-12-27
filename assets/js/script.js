@@ -98,7 +98,7 @@ const a_answer = document.getElementById('a_answer')
 const b_answer = document.getElementById('b_answer')
 const c_answer = document.getElementById('c_answer')
 const d_answer = document.getElementById('d_answer')
-const submitBtn = document.getElementById('submit')
+const submitBtn = document.getElementById('next-btn')
 
 const deselectAnswers = () => {
     answerElements.forEach(answerElements => answerElements.checked = false)
@@ -141,8 +141,6 @@ function submitAnswer() {
         if(el.checked) {
             if(el.id === currentQuizData.correctAnswer) {
                 score ++
-            } else {
- 
             }
         }
     })
@@ -153,6 +151,12 @@ function submitAnswer() {
     
     if(currentQuiz < quizData.length) {
         loadQuiz()
+    } else {
+        quiz.innerHTML = `
+        <h2> You answered ${score}/${quizData.length} questions correctly!</h2>
+
+        <button onclick="location.reload()">Reload</button>
+        `
     }
 
     console.log(score)
