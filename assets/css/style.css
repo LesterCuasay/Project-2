@@ -31,15 +31,17 @@ li {
 }
 
 /* Styling for the landing page */
-.container, .quiz-container {
+.container, .quiz-container{
     height: auto;
     width: 600px;
+    max-width: 80%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
     box-shadow: 5px 10px 8px #131515;
+    position: fixed;
 }
 
 .container .heading {
