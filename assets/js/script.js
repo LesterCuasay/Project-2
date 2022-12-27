@@ -104,7 +104,12 @@ const startBtn = document.getElementById('start-btn')
 const resultContainer = document.getElementById('results-container')
 const result = document.getElementById('result')
 const alertMsg = document.querySelector('.error-msg-container')
+const questionLength = document.getElementById('question-length')
 
+// Sets quiz rule number of questions
+questionLength.innerText = quizData.length
+ 
+// Resets Answers
 const deselectAnswers = () => {
     answerElements.forEach(answerElements => answerElements.checked = false)
 }
@@ -159,11 +164,20 @@ function submitAnswer() {
             if (el.checked) {
                 if (el.id === currentQuizData.correctAnswer) {
                     score++
+                    el.nextElementSibling.style.color="green"
+                    setTimeout(() => {
+                        el.nextElementSibling.style.color=null
+                    }, 1000);
+                } else {
+                    el.nextElementSibling.style.color="red"
+                    setTimeout(() => {
+                        el.nextElementSibling.style.color=null
+                    }, 1000);
                 }
             }
         })
 
-        nextQuestion()
+        setTimeout(nextQuestion, 1000)
     } else {
         alertMsg.style.display="flex"
     }
@@ -174,7 +188,7 @@ function submitAnswer() {
 function nextQuestion() {
 
     alertMsg.style.display="none"
-    
+
     quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
 
     if (quizDataCopy.length > 0) {
@@ -185,6 +199,7 @@ function nextQuestion() {
 
 }
 
+// Hides Quiz cointainer and shows Results container
 function displayResults(score) {
     quizContainer.classList.add("hide")
     resultContainer.classList.remove("hide")

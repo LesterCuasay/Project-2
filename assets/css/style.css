@@ -73,7 +73,8 @@ li {
 }
 
 .container .intro ul li {
-    
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
 }
 
 .container .start-btn button, 
