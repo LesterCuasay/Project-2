@@ -31,7 +31,9 @@ li {
 }
 
 /* Styling for the landing page */
-.container, .quiz-container{
+.container, 
+.quiz-container,
+.results-container {
     height: auto;
     width: 600px;
     max-width: 80%;

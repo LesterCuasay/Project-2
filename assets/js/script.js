@@ -85,6 +85,7 @@ const quizData = [
     },
 ];
 
+// Global let
 let quizDataCopy = quizData
 let currentQuiz = 0
 let score = 0 
@@ -101,6 +102,8 @@ const d_answer = document.getElementById('d_answer')
 const submitBtn = document.getElementById('next-btn')
 const startContainer = document.getElementById('start-container')
 const startBtn = document.getElementById('start-btn')
+const resultContainer = document.getElementById('results-container')
+const result = document.getElementById('result')
 
 const deselectAnswers = () => {
     answerElements.forEach(answerElements => answerElements.checked = false)
@@ -117,9 +120,11 @@ const randomizer = (num) => {
 // Loads Quiz
 
 function loadQuiz() {
-    console.log('started')
+
+    // Hides start container and shows quiz container
     startContainer.classList.add('hide')
     quizContainer.classList.remove('hide')
+
 
     currentQuiz = randomizer(quizDataCopy.length)
     currentQuizData = quizDataCopy[currentQuiz]
@@ -139,27 +144,37 @@ function loadQuiz() {
 
 // Check if answer is correct
 function submitAnswer() {
+   
     answerElements.forEach(el => {
         if(el.checked) {
             if(el.id === currentQuizData.correctAnswer) {
                 score ++
-            }
+            } 
         }
     })
     
-    // Move to the next question
+    nextQuestion()
+    console.log(score)
+}
 
+  // Move to the next question
+function nextQuestion() {
+  
     quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
     
     if(currentQuiz < quizData.length) {
         loadQuiz()
+        currentQuiz ++
     } else {
-        quiz.innerHTML = `
-        <h2> You answered ${score}/${quizData.length} questions correctly!</h2>
-
-        <button onclick="location.reload()">Reload</button>
-        `
+        displayResults(correctTotal)
     }
 
-    console.log(score)
 }
+
+function displayResults(correctTotal) {
+   quizContainer.style.display = 'none'
+   resultContainer.style.display = ''
+   result.innerText = `${correctTotal} out of ${quizData.length}`
+}
+
+
