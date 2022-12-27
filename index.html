@@ -51,8 +51,10 @@
                             <input type="radio" name="answer" id="d" class="answer">
                             <label for="d" id="d_answer">Answer</label>
                         </li>
-
                     </ul>
+                    <div class="hide error-msg-container">
+                        <p class="error-msg" id="error-msg">Have you chosen an answer?</p>
+                    </div>
                 </div>
                 <div class="next-btn">
                     <button id="submit" onclick="submitAnswer()">Next Question</button>
@@ -63,7 +65,7 @@
         <div id="results-container" class="results-container hide" >
             <p id="comment"></p>
             <span id="result"></span>
-            
+
             <button onclick="location.reload()">Try again!</button>
         </div>
 

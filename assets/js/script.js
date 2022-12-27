@@ -1,7 +1,6 @@
 // Array of questions
 
-const quizData = [
-    {
+const quizData = [{
         question: "What is the oldest recorded town in the UK",
         answer: {
             a: "Brighton",
@@ -59,7 +58,7 @@ const quizData = [
             c: "Spain",
             d: "Scotland"
         },
-        
+
 
         correctAnswer: "b",
     },
@@ -81,13 +80,13 @@ const quizData = [
             c: "River Severn",
             d: "River Tay"
         },
-       correctAnswer: "a",
+        correctAnswer: "a",
     },
 ];
 
 // Global let
 let quizDataCopy = quizData
-let score = 0 
+let score = 0
 let currentQuiz
 let currentQuizData
 
@@ -104,6 +103,7 @@ const startContainer = document.getElementById('start-container')
 const startBtn = document.getElementById('start-btn')
 const resultContainer = document.getElementById('results-container')
 const result = document.getElementById('result')
+const alertMsg = document.querySelector('.error-msg-container')
 
 const deselectAnswers = () => {
     answerElements.forEach(answerElements => answerElements.checked = false)
@@ -129,10 +129,10 @@ function loadQuiz() {
 
     // Hides start container and shows quiz container
     quizContainer.classList.remove('hide')
-    
+
     currentQuiz = randomizer(quizDataCopy.length)
     currentQuizData = quizDataCopy[currentQuiz]
-    
+
 
     deselectAnswers()
 
@@ -145,25 +145,39 @@ function loadQuiz() {
 
 // Check if answer is correct
 function submitAnswer() {
-    
-    answerElements.forEach(el => {
-        if(el.checked) {
-            if(el.id === currentQuizData.correctAnswer) {
-                score++
-            } 
-        }
+
+    // Checks if an answer is selected
+    const answers = document.querySelectorAll(".answer")
+    let isChecked
+
+    answers.forEach(inp => {
+        if (inp.checked) isChecked = true
     })
+
+    if (isChecked) {
+        answerElements.forEach(el => {
+            if (el.checked) {
+                if (el.id === currentQuizData.correctAnswer) {
+                    score++
+                }
+            }
+        })
+
+        nextQuestion()
+    } else {
+        alertMsg.style.display="flex"
+    }
     
-    nextQuestion()
-    console.log(score)
 }
 
-  // Move to the next question
+// Move to the next question
 function nextQuestion() {
-  
-    quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
+
+    alertMsg.style.display="none"
     
-    if(quizDataCopy.length > 0) {
+    quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
+
+    if (quizDataCopy.length > 0) {
         loadQuiz()
     } else {
         displayResults(score)
@@ -172,26 +186,24 @@ function nextQuestion() {
 }
 
 function displayResults(score) {
-   quizContainer.classList.add("hide")
-   resultContainer.classList.remove("hide")
-   result.innerText = `${score} out of ${quizData.length}`
+    quizContainer.classList.add("hide")
+    resultContainer.classList.remove("hide")
+    result.innerText = `${score} out of ${quizData.length}`
 
-   if (score === quizData.length) {
-    comment.innerText = `
+    if (score === quizData.length) {
+        comment.innerText = `
     Awesome, You got every question right! 
     You scored
     `
-   } else if (score < (quizData.length) && score > (quizData.length /2)){
-   comment.innerText =`
+    } else if (score < (quizData.length) && score > (quizData.length / 2)) {
+        comment.innerText = `
    You nearly got all of them right! 
    You scored
     `
-   } else {
-    comment.innerText = `
+    } else {
+        comment.innerText = `
     Well... That was disappointing
     You scored
     `
-   }
+    }
 }
-
-
