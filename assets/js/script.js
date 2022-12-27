@@ -90,8 +90,8 @@ let currentQuiz = 0
 let score = 0 
 let currentQuizData
 
-
-const quiz = document.getElementById('quiz')
+// Global const
+const quizContainer = document.getElementById('quiz-container')
 const answerElements = document.querySelectorAll('.answer')
 const questionElement = document?.getElementById('question')
 const a_answer = document.getElementById('a_answer')
@@ -99,10 +99,14 @@ const b_answer = document.getElementById('b_answer')
 const c_answer = document.getElementById('c_answer')
 const d_answer = document.getElementById('d_answer')
 const submitBtn = document.getElementById('next-btn')
+const startContainer = document.getElementById('start-container')
+const startBtn = document.getElementById('start-btn')
 
 const deselectAnswers = () => {
     answerElements.forEach(answerElements => answerElements.checked = false)
 }
+
+startBtn.addEventListener('click', loadQuiz)
 
 // Sets quiz to random
 
@@ -110,14 +114,12 @@ const randomizer = (num) => {
     return Math.floor(Math.random() * num)
 }
 
-
-if (window.location.pathname === "/quiz.html") {
-    loadQuiz()
-}
-
 // Loads Quiz
 
 function loadQuiz() {
+    console.log('started')
+    startContainer.classList.add('hide')
+    quizContainer.classList.remove('hide')
 
     currentQuiz = randomizer(quizDataCopy.length)
     currentQuizData = quizDataCopy[currentQuiz]

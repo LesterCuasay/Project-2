@@ -31,7 +31,7 @@ li {
 }
 
 /* Styling for the landing page */
-.container {
+.container, .quiz-container {
     height: auto;
     width: 600px;
     background-color: #fff;
@@ -58,7 +58,7 @@ li {
 
 }
 
-.container .start-btn button, .next-btn {
+.container .start-btn button, .quiz-container .next-btn button{
     font-size: 1.5rem;
     width:100%;
     border-radius: 5px;
@@ -80,7 +80,7 @@ li {
     display: none;
 }
 
-.container .quiz-header h2 {
+.quiz-container .quiz-header h2 {
     font-size: 1.5rem;
     font-weight: 500;
     border-bottom: 1px solid #5c6d99;
@@ -88,24 +88,24 @@ li {
     text-align: center;
 }
 
-.container ul {
+.quiz-container ul {
     list-style-type: none;
     padding: 3rem 0.5rem;
     border-bottom: 1px solid #5c6d99;
 }
 
-.container ul li {
+.quiz-container ul li {
     margin: 0.5rem 0;
     font-size: 1.4rem;
     padding: 0 0.5rem;
 }
 
-.container ul li label {
+.quiz-container ul li label {
     cursor: pointer;
     padding: 0 1rem;
 }
 
-.container .next-btn button:hover {
+.quiz-container .next-btn button:hover {
     background: #54648c;
 }
 
