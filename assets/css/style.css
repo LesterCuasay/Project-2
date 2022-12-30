@@ -95,9 +95,18 @@ li {
     display: none;
 }
 
-.timer-text {
-    display: ;
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.timer-text {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0.2rem;
+}
+
 .quiz-container .quiz-header h2 {
     font-size: 1.5rem;
     font-weight: 500;
