@@ -89,6 +89,7 @@ let quizDataCopy = quizData
 let score = 0
 let currentQuiz
 let currentQuizData
+let timeLeft = 30
 
 // Global const
 const quizContainer = document.getElementById('quiz-container')
@@ -130,6 +131,7 @@ const randomizer = (num) => {
 // Loads Quiz
 
 function loadQuiz() {
+    setTime()
     const questionElement = document.getElementById('question')
 
     // Hides start container and shows quiz container
@@ -147,6 +149,36 @@ function loadQuiz() {
     c_answer.innerText = currentQuizData.answer.c
     d_answer.innerText = currentQuizData.answer.d
 }
+
+// Timer for the quiz
+
+timer = setInterval(setTime, 1000)
+
+function setTime() {
+
+
+    if (timeLeft == -1) {
+        clearTimeout(timer)
+        alert('Oops! You ran out of time')
+    } else {
+        document.getElementById('time-left').innerHTML = timeLeft
+        timeLeft--
+    }
+    console.log('time')
+}
+
+    // timer = setInterval(function() {
+    //     time--
+    //     if (time === 0) {
+    //         stopInterval()
+    //         alert('Oops! You ran out of time')
+    //     }
+    // }, 1000)
+
+    // let stopInterval = function() {
+    //     clearInterval(timer)
+    // }
+
 
 // Check if answer is correct
 function submitAnswer() {
