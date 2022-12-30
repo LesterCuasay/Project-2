@@ -118,7 +118,6 @@ const deselectAnswers = () => {
 // Start the quiz
 startBtn.addEventListener('click', () => {
     startContainer.classList.add('hide')
-
     loadQuiz()
 })
 
@@ -131,6 +130,7 @@ const randomizer = (num) => {
 // Loads Quiz
 
 function loadQuiz() {
+
     setTime()
     const questionElement = document.getElementById('question')
 
@@ -152,37 +152,36 @@ function loadQuiz() {
 
 // Timer for the quiz
 
-timer = setInterval(setTime, 1000)
+displayTime()
 
 function setTime() {
 
+    let timer = setInterval(function() {
+        if (timeLeft == -1) {
+            clearInterval(timer)
+            alert('Oops! You ran out of time')
+            window.location.reload()
+        } else {
+            displayTime()
+            timeLeft--
+        }
+    }, 1000)
 
-    if (timeLeft == -1) {
-        clearTimeout(timer)
-        alert('Oops! You ran out of time')
-    } else {
-        document.getElementById('time-left').innerHTML = timeLeft
-        timeLeft--
-    }
     console.log('time')
 }
 
-    // timer = setInterval(function() {
-    //     time--
-    //     if (time === 0) {
-    //         stopInterval()
-    //         alert('Oops! You ran out of time')
-    //     }
-    // }, 1000)
+function displayTime() {
+    document.getElementById('time-left').innerHTML = timeLeft
+}
 
-    // let stopInterval = function() {
-    //     clearInterval(timer)
-    // }
-
+// Resets Timer
+function resetTime() {
+    setTime()
+}
 
 // Check if answer is correct
 function submitAnswer() {
-
+    
     // Checks if an answer is selected
     const answers = document.querySelectorAll(".answer")
     let isChecked
@@ -218,7 +217,6 @@ function submitAnswer() {
 
 // Move to the next question
 function nextQuestion() {
-
     alertMsg.style.display="none"
 
     quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
