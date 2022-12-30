@@ -27,7 +27,6 @@ p,
 li {
     font-family: 'Neuton', sans-serif;
     font-size: 1.2rem;
-    font-weight: 800;
 }
 
 /* Styling for the landing page */
@@ -102,9 +101,18 @@ li {
 }
 
 .timer-text {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+    background-color: #5c6d99;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    
+}
+
+.timer-text span {
+    font-size: 1.5rem;
     font-weight: 800;
-    margin-top: 0.2rem;
 }
 
 .quiz-container .quiz-header h2 {
