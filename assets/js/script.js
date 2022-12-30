@@ -127,17 +127,18 @@ startBtn.addEventListener('click', () => {
 })
 
 // Sets quiz to random
-
 const randomizer = (num) => {
     return Math.floor(Math.random() * num)
 }
 
+// Increments Current Questions
 function incrementQuestion() {
     questionCounter++
-    currentQuestions.innerText = `${questionCounter}`
+    currentQuestions.innerText = `${questionCounter} `
 }
-// Loads Quiz
 
+
+// Loads Quiz
 function loadQuiz() {
 
     setTime()
@@ -160,7 +161,6 @@ function loadQuiz() {
 }
 
 // Timer for the quiz
-
 displayTime()
 
 function setTime() {
@@ -180,6 +180,7 @@ function setTime() {
     console.log('time')
 }
 
+// Displays Time
 function displayTime() {
 
     if (timeLeft.toString().length < 2) {
@@ -234,8 +235,11 @@ function submitAnswer() {
 
 // Move to the next question
 function nextQuestion() {
+
     alertMsg.style.display="none"
 
+    incrementQuestion()
+    
     quizDataCopy = quizDataCopy.filter(obj => obj !== currentQuizData)
 
     if (quizDataCopy.length > 0) {
