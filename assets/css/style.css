@@ -95,6 +95,9 @@ li {
     display: none;
 }
 
+.timer-text {
+    display: ;
+}
 .quiz-container .quiz-header h2 {
     font-size: 1.5rem;
     font-weight: 500;

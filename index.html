@@ -33,7 +33,12 @@
         <div class="quiz-container">
             <div id="quiz-container" class="hide">
                 <div class="quiz-header">
+                    <div class="timer" id="timer">
+                        <p class="timer-text">0</p>
+                    </div>
                     <h2 id="question">Question Text</h2>
+                </div>
+                <div>
                     <ul>
                         <li>
                             <input type="radio" name="answer" id="a" class="answer">
@@ -59,6 +64,7 @@
                         <p class="error-msg" id="error-msg">Have you chosen an answer?</p>
                     </div>
                 </div>
+                
                 <div class="next-btn">
                     <button id="submit" onclick="submitAnswer()">Next Question</button>
                 </div>
