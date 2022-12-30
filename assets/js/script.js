@@ -90,6 +90,8 @@ let score = 0
 let currentQuiz
 let currentQuizData
 let timeLeft = 30
+let timer
+
 
 // Global const
 const quizContainer = document.getElementById('quiz-container')
@@ -156,7 +158,8 @@ displayTime()
 
 function setTime() {
 
-    let timer = setInterval(function() {
+    resetTime(timer)
+    timer = setInterval(function() {
         if (timeLeft == -1) {
             clearInterval(timer)
             alert('Oops! You ran out of time')
@@ -171,12 +174,19 @@ function setTime() {
 }
 
 function displayTime() {
-    document.getElementById('time-left').innerHTML = timeLeft
+
+    if (timeLeft.toString().length < 2) {
+        document.getElementById('time-left').innerHTML = "0" + timeLeft
+    } else {
+        document.getElementById('time-left').innerHTML = timeLeft
+    }
+
 }
 
 // Resets Timer
-function resetTime() {
-    setTime()
+function resetTime(timerInterval) {
+    clearInterval(timerInterval)
+    timeLeft = 30
 }
 
 // Check if answer is correct
@@ -198,17 +208,17 @@ function submitAnswer() {
                     el.nextElementSibling.style.color="green"
                     setTimeout(() => {
                         el.nextElementSibling.style.color=null
-                    }, 1000);
+                    }, 2000);
                 } else {
                     el.nextElementSibling.style.color="red"
                     setTimeout(() => {
                         el.nextElementSibling.style.color=null
-                    }, 1000);
+                    }, 2000);
                 }
             }
         })
 
-        setTimeout(nextQuestion, 1000)
+        setTimeout(nextQuestion, 2000)
     } else {
         alertMsg.style.display="flex"
     }
@@ -223,6 +233,7 @@ function nextQuestion() {
 
     if (quizDataCopy.length > 0) {
         loadQuiz()
+        setTime()
     } else {
         displayResults(score)
     }
