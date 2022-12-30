@@ -108,6 +108,8 @@ const resultContainer = document.getElementById('results-container')
 const result = document.getElementById('result')
 const alertMsg = document.querySelector('.error-msg-container')
 const questionLength = document.getElementById('question-length')
+const currentQuestions = document.getElementById('current-question')
+
 
 // Sets quiz rule number of questions
 questionLength.innerText = quizData.length
