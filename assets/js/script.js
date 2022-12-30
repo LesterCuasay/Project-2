@@ -91,7 +91,7 @@ let currentQuiz
 let currentQuizData
 let timeLeft = 30
 let timer
-
+let questionCounter = 1
 
 // Global const
 const quizContainer = document.getElementById('quiz-container')
@@ -113,6 +113,7 @@ const currentQuestions = document.getElementById('current-question')
 
 // Sets quiz rule number of questions
 questionLength.innerText = quizData.length
+
  
 // Resets Answers
 const deselectAnswers = () => {
@@ -131,6 +132,10 @@ const randomizer = (num) => {
     return Math.floor(Math.random() * num)
 }
 
+function incrementQuestion() {
+    questionCounter++
+    currentQuestions.innerText = `${questionCounter}`
+}
 // Loads Quiz
 
 function loadQuiz() {
