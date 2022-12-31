@@ -253,6 +253,7 @@ if (quizDataCopy.length > 0) {
 
 // Hides Quiz cointainer and shows Results container
 function displayResults(score) {
+let comment = document.getElementById('comment')
 quizContainer.classList.add("hide");
 resultContainer.classList.remove("hide");
 result.innerText = `${score} out of ${quizData.length}`;
