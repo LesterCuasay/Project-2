@@ -162,6 +162,29 @@ li {
     background: #54648c;
 }
 
+/* Styling for Footer */
+
+footer {
+  height: 75px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-links li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 2.5em 0.5em;
+}
+
+.social-links i {
+    font-size: 2rem;
+    color: #fff;
+}
+
 /* Styling for Result Page */
 
 .results-container span {
