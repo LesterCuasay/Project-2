@@ -198,3 +198,48 @@ Fix: Added semi-colons to where it was needed.
 Bug f4b678: The variable "comment" had no global constant.
 
 Fix: Made a constant variable for "comment".
+
+## __Deployment__
+
+### GitHub Pages
+This site was deployed using GitHub Pages using these steps:
+
+1. Log in to GitHub and go to the project [GitHub Repository](https://github.com/LesterCuasay?tab=repositories)
+2. Locate the Navbar of the project and click on Settings tab.
+3. On the settings on the left hand side, locate "Pages" under "Code and automation".
+4. On the Branch where it says "None" click the drop down and click select "Main" and click save.
+5. The page will automatically refresh.
+6. A notification will appear at the top of the settings page with a [link](https://lestercuasay.github.io/Project-2/) to the deplyed site. You can return to this GitHub Pages section to access the link.
+___
+### Forking the GitHub Repository
+
+Forks are used to be able to change someone else's project as your own idea. By forking the Github Respository you make a copy of the original on your GitHub account to view/or make changes without affecting the original repository.
+
+To Fork a Github Repository:
+1. Log in to GitHub and go to the project [GitHub Repository](https://github.com/LesterCuasay?tab=repositories)
+2. Locate the Fork button in the top-right corner of the page and click Fork.
+3. You should now have a copy of the original repository in your GitHub Account.
+___
+### Making a Local Clone
+
+To Clone the repository: 
+1. Log in to GitHub and go to the project [GitHub Repository](https://github.com/LesterCuasay?tab=repositories)
+2. On the repository page, find and click on the 'Code' menu in the middle of the screen.
+3. There are multiple ways of doing this next step:
+    - To clone the repository using HTTPs, under "Clone with HTTPS", click 'copy' icon.
+    - To clone the repository using an SSH key, including a certificate issued by your organisation's SSH certificate authority, click 'Use SSH', then click the 'copy' icon.
+    - To clone a repository using GitHub CLI, click 'Use GitHub CLI', then click the 'copy' icon.
+4. Open Git Bash.
+5. Change the current working directory to the locaiton where you want the clone directory.
+6. Type 'git clone', and paste the URL you copied.
+7. Press Enter.
+
+For more information about Forking, click on this [GitHub Guide](https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo).
+
+## __Credits__
+
+- The icons on the footer are from [Font Awesome](https://fontawesome.com/)
+- The fonts are from [Google Fonts](https://fonts.google.com/)
+- The question are from [Radio Times](https://www.radiotimes.com/quizzes/pub-quiz-geography/)
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
