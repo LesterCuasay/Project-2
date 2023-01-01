@@ -159,8 +159,14 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 ### Tools
 
 - [Figma](https://www.figma.com/)
-- [W3C Markup Validation Service](https://validator.w3.org/)
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [W3C Validator](https://validator.w3.org/)
+- [W3C Validator - Jigsaw](https://jigsaw.w3.org/css-validator/)
 - [JShint](https://jshint.com/)
 - [GitPod](https://www.gitpod.io/)
 - [GitHub](https://github.com/)
+
+***
+## __Testing__
+
+[Testing](TESTING.md) (Seperate ReadMe)
+
