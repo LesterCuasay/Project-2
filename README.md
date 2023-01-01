@@ -174,3 +174,27 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 ## __Bugs__
 
 ### Current Bugs
+
+There are no bugs I am currently aware of.
+
+### Resolved Bugs
+
+Bug 75c801: The intro container was not going into the middle of the screen.
+
+Fix: Added a position property to the container.
+
+Bug 0964c4: The timer for the quiz was not displaying properly.
+
+Fix: Added a function called "displayTime" and called it outside of the function and the timer was showing properly.
+
+Bug fd266d: The question counter was being incremented when clicking "Next Question" even without the user choosing an answer.
+
+Fix: Moved the placement of incrementQuestion function call into the nextQuestion function.
+
+Bug 017dff: No semi-colons in script.js
+
+Fix: Added semi-colons to where it was needed.
+
+Bug f4b678: The variable "comment" had no global constant.
+
+Fix: Made a constant variable for "comment".
