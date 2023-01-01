@@ -142,7 +142,6 @@ currentQuestions.innerText = `${questionCounter} `;
 function loadQuiz() {
 
 setTime();
-const questionElement = document.getElementById('question');
 
 // Hides start container and shows quiz container
 quizContainer.classList.remove('hide');
@@ -197,6 +196,8 @@ timeLeft = 30;
 }
 
 // Check if answer is correct
+/** submitAnswer & submitBtn 
+ *  exported into HTML */
 function submitAnswer() {
 
 // Checks if an answer is selected

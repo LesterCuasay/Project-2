@@ -100,3 +100,8 @@ I decided to use Catamaran as the heading text for the application and Neuton fo
 For the font pairings I used [Fontjoy](https://fontjoy.com/)
 
 ![fontpairing](assets/docs/font-generator.png "fontpairing")
+
+***
+## __Features__
+
+
