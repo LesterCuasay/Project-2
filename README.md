@@ -240,6 +240,6 @@ For more information about Forking, click on this [GitHub Guide](https://docs.gi
 
 - The icons on the footer are from [Font Awesome](https://fontawesome.com/)
 - The fonts are from [Google Fonts](https://fonts.google.com/)
-- The question are from [Radio Times](https://www.radiotimes.com/quizzes/pub-quiz-geography/)
+- The questions are from [Radio Times](https://www.radiotimes.com/quizzes/pub-quiz-geography/)
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
