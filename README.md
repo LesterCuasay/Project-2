@@ -140,4 +140,27 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 - At the results page, if the user wants to restart the quiz they will be able to by clicking this button and it will take them back to the intro page.
 
 ![footer](assets/docs/footer.png "footer")
-- This feature is seen both at the intro page and the quiz page, they are links to my [LinkedIn](https://www.linkedin.com/in/lester-cuasay/) profile and [GitHub](https://github.com/LesterCuasay?tab=repositories) profile.
+- This feature is seen both at the intro page and the quiz page, they are links to my [LinkedIn](https://www.linkedin.com/in/lester-cuasay/) profile and [GitHub](https://github.com/LesterCuasay?tab=repositories) profile. Both the links will be opened in a new tab.
+
+***
+## __Technologies Used__
+
+### Languages Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://www.javascript.com/)
+
+### Libraries & Frameworks
+
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+
+### Tools
+
+- [Figma](https://www.figma.com/)
+- [W3C Markup Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [JShint](https://jshint.com/)
+- [GitPod](https://www.gitpod.io/)
+- [GitHub](https://github.com/)
