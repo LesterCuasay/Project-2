@@ -53,3 +53,50 @@ In this project I intent to create a quiz that tests the knowledge of the users 
 - A feature showing if the answer was correct or incorrect.
 - An opportunity to restart the quiz to get a better result.
 
+***
+## __UX & Design__
+
+### User Stories
+ - As a first time user, I want to be able to figure out what the application is intented for so that I can use it with ease.
+ - As a user, I want clear indication whether I got the answer correct or incorrect so that I am aware.
+ - As a user, I want to be able to see my score at the end so that I can check how I did.
+ - As a returning user, I want to be able to restart the quiz so that I can try and improve my score.
+ 
+ ***
+ ## __Initial Concept__
+
+ I hope to deliver a quiz that is simple to use for the user with no conflicting colours to distract them. The application also needs to be easily navigated throughout different devices such as desktop, tablet or mobile devices.
+
+ ### Wireframes
+ ___
+ As part of the planning stage, I created wireframes for desktop and mobile using [Figma](https://www.figma.com/). This allowed me to have a scratch idea on how to go ahead with the application.
+
+ The layout I created on figma, I have followed throughout making the application but throughout the project I have added more features to make it better for users to use.
+
+ ![intro-page](assets/docs/figma-intro.png "intro")
+ - The layout throughout the application is consitent to the intro page making the application flow thus being easier to navigate for users.
+
+ ![quiz](assets/docs/figma-quiz.png "quiz")
+ - The only difference in this layout is the text indicating to users that the quiz has started.
+
+### Colour Scheme
+___
+![colourscheme](assets/docs/colour-scheme.png "colour scheme")
+
+I used [Coolors.co](https://coolors.co/) to choose my colour scheme.
+
+The body background I have chosen for this application is #5c6d99 which is Blue Yonder. The background for the main areas I used #fff which is White and the text colour for that being #131515 Eerie Black.
+
+But in some cases where the background is #5c6d99 for the buttons I used #fff as the text colour for better readability.
+
+I have also used #54648c Dark Blue Gray as a hover effect on the buttons.
+
+### Typography
+___
+
+For the Application, I am using [Google Fonts](https://fonts.google.com/). 
+I decided to use Catamaran as the heading text for the application and Neuton for the rest of the text.
+
+For the font pairings I used [Fontjoy](https://fontjoy.com/)
+
+![fontpairing](assets/docs/font-generator.png "fontpairing")
