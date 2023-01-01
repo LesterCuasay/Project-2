@@ -170,3 +170,7 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 
 [Testing](TESTING.md) (Seperate ReadMe)
 
+***
+## __Bugs__
+
+### Current Bugs
