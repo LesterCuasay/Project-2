@@ -212,79 +212,91 @@ footer p {
 
 /* Media Queries */
 
-@media screen and (max-width: 375px) {
-
-.container, 
-.quiz-container,
-.results-container {
-    width: 320px;
-    text-align: center;
-}
-
-.container .heading {
-    font-size: 0.7rem;
-}
-
-.container .intro h2 {
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.container .intro ul li {
-    font-size: 0.8rem;
-}
-
-.container .start-btn button, 
-.quiz-container .next-btn button,
-.results-container button {
-    font-size: 1.5rem;
-    padding: 1.5rem;
-}
-
-.quiz-container ul {
-    text-align: left;
-    padding: 5%;
-}
-
-.quiz-container ul li {
-    font-size: 1rem;
-}
-
-.quiz-container .quiz-header h2 {
-    font-size: 1rem;
-}
-
-.social-links i {
-    font-size: 1.5rem;
-}
-footer p {
-    font-size: 1rem;
-}
-
-}
+/* For Small screen sizes from 725px wide and down */
 
 @media screen and (max-width: 725px) {
 
-.container, 
-.quiz-container,
-.results-container {
-    width: 450px;
+    .container,
+    .quiz-container,
+    .results-container {
+        width: 450px;
+    }
+
+    .container .heading {
+        font-size: 1.2rem;
+    }
 }
 
-.container .heading {
-    font-size: 1.2rem;
-}
-}
+/* For Smaller screen sizes from 525px wide and down */
 
 @media screen and (max-width: 525px) {
 
-.container .heading {
-    font-size: 0.9rem;
+    .container .heading {
+        font-size: 0.9rem;
+    }
+
+    .container .intro ul li {
+        font-size: 1rem;
+    }
+
 }
 
-.container .intro ul li {
-    font-size: 1rem;
-}
+/* For Smaller screen sizes from 370px wide and down */
+
+@media screen and (max-width: 370px) {
+
+    .container,
+    .quiz-container,
+    .results-container {
+        width: 320px;
+        text-align: center;
+    }
+
+    .container .heading {
+        font-size: 0.7rem;
+    }
+
+    .container .intro h2 {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .container .intro ul {
+        padding: 0.2rem 2rem;
+        text-align: left;
+    }
+
+    .container .intro ul li {
+        font-size: 0.8rem;
+    }
+
+    .container .start-btn button,
+    .quiz-container .next-btn button,
+    .results-container button {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .quiz-container ul {
+        padding: 5%;
+        text-align: left;
+    }
+
+    .quiz-container ul li {
+        font-size: 1rem;
+    }
+
+    .quiz-container .quiz-header h2 {
+        font-size: 1rem;
+    }
+
+    .social-links i {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
 
 }
