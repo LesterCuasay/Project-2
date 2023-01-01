@@ -191,6 +191,7 @@ footer p {
     font-size: 1.2rem;
     font-weight: 800;
 }
+
 /* Styling for Result Page */
 
 .results-container span {
@@ -209,9 +210,9 @@ footer p {
     background: #54648c;
 }
 
- /* Media Queries */
+/* Media Queries */
 
- @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
 
 .container, 
 .quiz-container,
@@ -285,4 +286,5 @@ footer p {
 .container .intro ul li {
     font-size: 1rem;
 }
+
 }

@@ -177,7 +177,6 @@ timer = setInterval(function() {
     }
 }, 1000);
 
-console.log('time');
 }
 
 // Displays Time
