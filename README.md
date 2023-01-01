@@ -104,4 +104,40 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 ***
 ## __Features__
 
+![start-quiz](assets/docs/start-quiz.png "start-quiz")
+- This feature is located at the intro page of the quiz, clicking this button will start the quiz.
 
+![question-tally](assets/docs/question-tally.png "question-tally")
+- This feature shows how many question is left and what number of question you are on. It will increment every time the next question button is clicked.
+
+![time-left](assets/docs/time-left.png "time-left")
+- This feature is a countdown, the user has 30 seconds to answer the question and move on to the next question.
+
+![correct](assets/docs/correct.png "correct")
+![incorrect](assets/docs/incorrect.png "incorrect")
+- This features lets the user know if the answer they have chosen is correct or wrong when they click the "Next Question" button.
+
+![time-out](assets/docs/time-out.png "time-out")
+- When the timer reaches 0 the user will be alerted that they have ran out of time and the quiz will reload back to the intro page.
+![reload](assets/docs/reload.png "reload")
+
+![pick-answer](assets/docs/pick-answer.png "pick-answer")
+- This feature pops up when the user tries to click the "Next Question" button without picking an option.
+
+![next](assets/docs/next.png "next")
+- This feature enables the user to move on to the next question after picking an answer to the question.
+
+![all-right](assets/docs/all-right.png "all-right")
+- This feature pops up at the end of the quiz if the user got all of the questions right.
+
+![half-right](assets/docs/half-right.png "half-right")
+- This feature pops up at the end of the quiz if the user got half of the questions right.
+
+![less-than-half](assets/docs/less-than-half.png "less-than-half")
+- This feature pops up at the end of the quiz if the user got less than half of the questions right.
+
+![try-again](assets/docs/try-again.png "try-again")
+- At the results page, if the user wants to restart the quiz they will be able to by clicking this button and it will take them back to the intro page.
+
+![footer](assets/docs/footer.png "footer")
+- This feature is seen both at the intro page and the quiz page, they are links to my [LinkedIn](https://www.linkedin.com/in/lester-cuasay/) profile and [GitHub](https://github.com/LesterCuasay?tab=repositories) profile.
