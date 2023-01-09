@@ -22,13 +22,19 @@ https://github.com/LesterCuasay/Project-2
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
 - [Features](#features)
-    - [Logo and Navigation Bar](#logo-and-navigation-bar)
-    - [Main Image](#main-image)
+    - [Start Quiz](#start-quiz-button)
+    - [Question Tally](#question-tally)
+    - [Time Left](#time-left)
+    - [Correct or Incorrect](#correct-or-incorrect)
+    - [Time Out](#time-out)
+    - [Pick Answer](#pick-answer)
+    - [Next Question](#next-question-button)
+    - [Questions all right](#questions-all-right)
+    - [Questions half right](#questions-half-right)
+    - [Questions less than half right](#questions-less-than-half-right)
+    - [Try Again](#try-again)
     - [Footer](#footer)
-    - [Back to Top](#back-to-top)
-    - [Contact Form](#contact-form)
-    - [Back to Home](#back-to-home)
-    - [Video](#video)
+
 - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
 - [Testing](#testing)
@@ -104,40 +110,75 @@ For the font pairings I used [Fontjoy](https://fontjoy.com/)
 ***
 ## __Features__
 
+### Start Quiz Button
+___
+
 ![start-quiz](assets/docs/start-quiz.png "start-quiz")
 - This feature is located at the intro page of the quiz, clicking this button will start the quiz.
+
+### Question Tally
+___
 
 ![question-tally](assets/docs/question-tally.png "question-tally")
 - This feature shows how many question is left and what number of question you are on. It will increment every time the next question button is clicked.
 
+### Time Left
+___
+
 ![time-left](assets/docs/time-left.png "time-left")
 - This feature is a countdown, the user has 30 seconds to answer the question and move on to the next question.
+
+### Correct or Incorrect
+___
 
 ![correct](assets/docs/correct.png "correct")
 ![incorrect](assets/docs/incorrect.png "incorrect")
 - This features lets the user know if the answer they have chosen is correct or wrong when they click the "Next Question" button.
 
+### Time Out
+___
+
 ![time-out](assets/docs/time-out.png "time-out")
-- When the timer reaches 0 the user will be alerted that they have ran out of time and the quiz will reload back to the intro page.
 ![reload](assets/docs/reload.png "reload")
+- When the timer reaches 0 the user will be alerted that they have ran out of time and the quiz will reload back to the intro page.
+
+### Pick Answer
+___
 
 ![pick-answer](assets/docs/pick-answer.png "pick-answer")
 - This feature pops up when the user tries to click the "Next Question" button without picking an option.
 
+### Next Question Button
+___
 ![next](assets/docs/next.png "next")
 - This feature enables the user to move on to the next question after picking an answer to the question.
+
+### Questions all right
+___
 
 ![all-right](assets/docs/all-right.png "all-right")
 - This feature pops up at the end of the quiz if the user got all of the questions right.
 
+### Questions half right
+___
+
 ![half-right](assets/docs/half-right.png "half-right")
 - This feature pops up at the end of the quiz if the user got half of the questions right.
+
+### Questions less than half right
+___
 
 ![less-than-half](assets/docs/less-than-half.png "less-than-half")
 - This feature pops up at the end of the quiz if the user got less than half of the questions right.
 
+### Try Again
+___
+
 ![try-again](assets/docs/try-again.png "try-again")
 - At the results page, if the user wants to restart the quiz they will be able to by clicking this button and it will take them back to the intro page.
+
+### Footer
+___
 
 ![footer](assets/docs/footer.png "footer")
 - This feature is seen both at the intro page and the quiz page, they are links to my [LinkedIn](https://www.linkedin.com/in/lester-cuasay/) profile and [GitHub](https://github.com/LesterCuasay?tab=repositories) profile. Both the links will be opened in a new tab.
